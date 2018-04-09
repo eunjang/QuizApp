@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="monospace"
+            android:paddingTop="18dp"
+            android:text="2/3"
+            android:textSize="17sp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="60dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:maxHeight="40dp"
+            android:maxWidth="10dp"
+            android:minHeight="35dp"
+            android:minWidth="10dp"
+            android:paddingTop="13dp"
+            android:progress="65" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingTop="65dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingBottom="8dp"
+            android:paddingLeft="13dp"
+            android:text="4. Overall, how would you rate your satisfaction of the kickoff? (1=Least / 5=Best)"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyle"
+            android:scaleX=".5"
+            android:rating="3.5"
+            android:scaleY=".5"
+            android:transformPivotX="30dp"
+            android:transformPivotY="20dp"
+            android:max="5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingBottom="8dp"
+            android:paddingLeft="13dp"
+            android:text="5. Which the recreational / non-meeting activities did you attend?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="15dp"
+            >
+            <CheckBox android:id="@+id/awards_dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/awards_dinner"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/basketball_contest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/basketball_contest"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/cruise_dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cruise_dinner"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/photo_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/photo_service"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:layout_marginLeft="100dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:onClick="prevPage"
+        android:text="Prev"
+        android:fontFamily="casual"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:onClick="nextPage"
+        android:text="Next"
+        android:fontFamily="casual"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+</RelativeLayout>
